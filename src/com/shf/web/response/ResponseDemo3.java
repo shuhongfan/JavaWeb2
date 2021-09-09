@@ -1,4 +1,4 @@
-package com.shf.web.request;
+package com.shf.web.response;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -6,19 +6,19 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.io.PrintWriter;
 
-@WebServlet("/requestDemo8")
-public class RequestDemo8 extends HttpServlet {
-
+@WebServlet("/responseDemo3")
+public class ResponseDemo3 extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        System.out.println("demo8被访问了");
-//        request代表一次请求域的访问，一般用户请求转发多个资源中共享的数据
-//        存储数据到request域中
-        req.setAttribute("msg" ,"hello");
-
-//        转发到demo9 浏览器地址栏不发生变化；只能发送到当前服务器中
-        req.getRequestDispatcher("/requestDemo9").forward(req,resp);
+//        resp.setCharacterEncoding("utf-8");
+//        resp.setHeader("content-type","text/html;charset=utf-8");
+        resp.setContentType("text/html;charset=utf-8");
+//        1. 获取字符输出流
+        PrintWriter pw = resp.getWriter();
+//        2.输出数据
+        pw.write("<h1>你好 hello response</h1>");
     }
 
     @Override

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <img src="/checkCodeServlet" alt="">
+    <a href="JavaScript:void(0);">看不清，换一张</a>
+</body>
+<script>
+
+    let a = document.getElementsByTagName("a")[0];
+
+    let img = document.getElementsByTagName("img")[0];
+
+    a.onclick=change;
+    img.onclick=change;
+
+    function change() {
+        let time = new Date().getTime();
+        img.src="/checkCodeServlet?"+time
+    }
+</script>
+</html>
