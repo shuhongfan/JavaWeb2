@@ -24,3 +24,5 @@
 hs_err_pid*
 
 apache-tomcat-8.5.70/*
+out/*
+.idea/*

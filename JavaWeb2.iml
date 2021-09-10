@@ -8,8 +8,8 @@
         </descriptors>
         <webroots>
           <root url="file://$MODULE_DIR$/web" relative="/" />
+          <root url="file://$MODULE_DIR$/src" relative="/" />
         </webroots>
-        <sourceRoots />
       </configuration>
     </facet>
   </component>
@@ -20,6 +20,12 @@
       <excludeFolder url="file://$MODULE_DIR$/.idea/httpRequests" />
       <excludeFolder url="file://$MODULE_DIR$/apache-tomcat-8.5.70/logs" />
       <excludeFolder url="file://$MODULE_DIR$/apache-tomcat-8.5.70/work" />
+      <excludeFolder url="file://$MODULE_DIR$/.idea/dataSources" />
+      <excludeFolder url="file://$MODULE_DIR$/apache-tomcat-8.5.70/bin" />
+      <excludeFolder url="file://$MODULE_DIR$/apache-tomcat-8.5.70/conf" />
+      <excludeFolder url="file://$MODULE_DIR$/apache-tomcat-8.5.70/lib" />
+      <excludeFolder url="file://$MODULE_DIR$/apache-tomcat-8.5.70/temp" />
+      <excludeFolder url="file://$MODULE_DIR$/apache-tomcat-8.5.70/webapps" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
