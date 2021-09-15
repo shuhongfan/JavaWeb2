@@ -43,5 +43,7 @@
       </library>
     </orderEntry>
     <orderEntry type="library" name="commons-beanutils-1.8.0" level="project" />
+    <orderEntry type="library" name="javax.servlet.jsp.jstl" level="project" />
+    <orderEntry type="library" name="jstl-impl" level="project" />
   </component>
 </module>
