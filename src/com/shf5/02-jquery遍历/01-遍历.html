@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../js/jquery-3.3.1.min.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript">
+    $(function () {
+       var citys=$("#city li")
+        for (let i = 0; i < citys.length; i++) {
+            console.log($(citys[i]).text())
+            if ("上海"==$(citys[i]).text()) break;
+        }
+
+        citys.each(function () {
+            console.log(this.innerText)
+        })
+
+        citys.each(function (index,element) {
+            console.log(index+": "+$(element).text())
+            if ("上海"==$(element).text()) return false;
+        })
+
+        console.log("--------------------------------------------")
+        $.each(citys,function () {
+            console.log(this.innerText)
+        })
+
+        for (let city of citys) {
+            console.log(city.innerText)
+        }
+    })
+
+    </script>
+</head>
+<body>
+<ul id="city">
+    <li>北京</li>
+    <li>上海</li>
+    <li>天津</li>
+    <li>重庆</li>
+</ul>
+</body>
+</html>

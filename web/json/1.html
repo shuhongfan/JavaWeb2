@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        var person=[
+            {"name":"张三",age:23,"gender":true},
+            {"name":"李四",age:24,"gender":true},
+            {"name":"王五",age:25,"gender":false},
+        ]
+        console.log(person)
+        console.log(person[0].age)
+
+        for (let i = 0; i < person.length; i++) {
+            for (let key in person[i]) {
+                console.log(key+person[i][key])
+            }
+        }
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

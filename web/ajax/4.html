@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="/js/jquery-2.1.0.min.js"></script>
+    <script>
+        $(function () {
+            $("#username").blur(function () {
+                let val = $(this).val();
+                $.get("/FindServlet",{username:val},function (data) {
+                    var span=$("#s_username")
+                    if (data.userExist){
+                        // 用户名存在
+                        span.css("color","red")
+                        span.html(data.msg)
+                    } else {
+                        // 用户名不存在
+                        span.css("color","green")
+                        span.html(data.msg)
+                    }
+                },"json")
+            })
+        })
+    </script>
+</head>
+<body>
+<form action="/FindUserServlet">
+    <input id="username" type="text" name="username" placeholder="请输入用户名"> <br>
+    <span id="s_username"></span>
+    <input id="password" type="password" name="password" placeholder="请输入密码"> <br>
+    <input type="submit" value="注册">
+</form>
+</body>
+</html>
